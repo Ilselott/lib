@@ -1,60 +1,66 @@
-NAME =	my
+##
+## EPITECH PROJECT, 2018
+## bootcamp-rebirth
+## File description:
+## Makefile
+##
 
-SRC =	convert_base.c \
-	disp.c \
-	my_compute_power_rec.c \
-	my_compute_square_root.c \
-	my_strdup.c \
-	my_find_prime_supp.c \
-	my_getnbr_base.c \
-	my_getnbr.c \
-	my_isneg.c \
-	my_is_prime.c \
+NAME =	libmy.a
+
+SRC =	array_utils/delete_tab.c \
+	array_utils/create_tab.c \
+	array_utils/find_in_tab.c \
+	array_utils/realloc_tab.c \
+	array_utils/copy_tab.c \
+	array_utils/add_line.c \
+	array_utils/get_val_from_tab.c \
+	array_utils/find_tab_size.c \
+	array_utils/display_array.c \
+	array_utils/strtowordtab.c \
+	array_utils/delete_line.c \
+	array_utils/realloc_tab.c \
+	array_utils/remove_line.c \
+	count_words.c \
 	my_putchar.c \
-	my_put_nbr.c \
 	my_putstr.c \
-	my_revstr.c \
-	my_showmem.c \
-	my_showstr.c \
-	my_sort_int_array.c \
-	my_strcapitalize.c \
-	my_strcat.c \
-	my_strcmp.c \
-	my_strcpy.c \
-	my_str_isalpha.c \
-	my_str_islower.c \
-	my_str_isnum.c \
-	my_str_isprintable.c \
-	my_str_isupper.c \
+	str_has_char.c \
+	my_putnbr.c \
+	my_memset.c \
 	my_strlen.c \
-	my_strlowcase.c \
-	my_strncat.c \
-	my_strncmp.c \
-	my_strncpy.c \
-	my_strstr.c \
-	my_strupcase.c \
-	my_swap.c \
-	show_str_array.c \
-	show_int_array.c
+	rb_free.c \
+	epur_str.c \
+	rb_malloc.c \
+	rb_print_err.c \
+	rb_realloc_str.c \
+	rb_strcmp.c \
+	rb_strcpy.c \
+	rb_str_to_int.c \
+	rb_strisinformat.c \
+	rb_strlowcase.c \
+	rb_strncmp.c \
+	rb_strupcase.c \
+	rb_xerror.c \
+	my_strndup.c\
+	concat_dup.c \
+	my_strdup.c \
+	is_separator.c \
+	consume_chars.c \
 
-OBJ =	$(SRC:.c=.o)
+OBJ =	$(SRC:%c=%o)
 
-INC =	-I include
+INC =	-I ../../include
 
-CFLAGS=	$(INC)
+CFLAGS+=	$(INC) -W -Wall -Wextra -Wshadow -g
 
-CC =	gcc
+all:	$(NAME)
 
-mklib:	all
-
-all:	$(OBJ)
-	ar rc lib$(NAME).a *.o
+$(NAME) : $(OBJ)
+	ar rc -o $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
 
 fclean:	clean
-	rm -f ../lib$(NAME).a
-	rm -f lib$(NAME).a
+	rm -f lib/$(NAME)
 
 re:	fclean all
