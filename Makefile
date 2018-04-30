@@ -7,44 +7,44 @@
 
 NAME =	libmy.a
 
-SRC =	array_utils/delete_tab.c \
-	array_utils/create_tab.c \
-	array_utils/find_in_tab.c \
-	array_utils/realloc_tab.c \
-	array_utils/copy_tab.c \
-	array_utils/add_line.c \
-	array_utils/get_val_from_tab.c \
-	array_utils/find_tab_size.c \
-	array_utils/display_array.c \
-	array_utils/strtowordtab.c \
-	array_utils/delete_line.c \
-	array_utils/realloc_tab.c \
-	array_utils/remove_line.c \
-	count_words.c \
-	my_putchar.c \
-	my_putstr.c \
-	str_has_char.c \
-	my_putnbr.c \
-	my_memset.c \
-	my_strlen.c \
-	rb_free.c \
-	epur_str.c \
-	rb_malloc.c \
-	rb_print_err.c \
-	rb_realloc_str.c \
-	rb_strcmp.c \
-	rb_strcpy.c \
-	rb_str_to_int.c \
-	rb_strisinformat.c \
-	rb_strlowcase.c \
-	rb_strncmp.c \
-	rb_strupcase.c \
-	rb_xerror.c \
-	my_strndup.c\
-	concat_dup.c \
-	my_strdup.c \
-	is_separator.c \
-	consume_chars.c \
+SRC =	src/delete_tab.c \
+	src/create_tab.c \
+	src/find_in_tab.c \
+	src/realloc_tab.c \
+	src/copy_tab.c \
+	src/add_line.c \
+	src/get_val_from_tab.c \
+	src/find_tab_size.c \
+	src/display_array.c \
+	src/strtowordtab.c \
+	src/delete_line.c \
+	src/realloc_tab.c \
+	src/remove_line.c \
+	src/count_words.c \
+	src/my_putchar.c \
+	src/my_putstr.c \
+	src/str_has_char.c \
+	src/my_putnbr.c \
+	src/my_memset.c \
+	src/my_strlen.c \
+	src/rb_free.c \
+	src/epur_str.c \
+	src/rb_malloc.c \
+	src/rb_print_err.c \
+	src/rb_realloc_str.c \
+	src/rb_strcmp.c \
+	src/rb_strcpy.c \
+	src/rb_str_to_int.c \
+	src/rb_strisinformat.c \
+	src/rb_strlowcase.c \
+	src/rb_strncmp.c \
+	src/rb_strupcase.c \
+	src/rb_xerror.c \
+	src/my_strndup.c\
+	src/concat_dup.c \
+	src/my_strdup.c \
+	src/is_separator.c \
+	src/consume_chars.c \
 
 OBJ =	$(SRC:%c=%o)
 
